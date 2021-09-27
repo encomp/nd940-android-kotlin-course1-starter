@@ -14,11 +14,11 @@
             app:layout_constraintGuide_percent="0.4" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/user"
+            android:id="@+id/userEmail"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/user"
-            app:layout_constraintBottom_toTopOf="@+id/password"
+            app:layout_constraintBottom_toTopOf="@+id/userPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline_horizontal">
@@ -31,7 +31,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password"
+            android:id="@+id/userPassword"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -40,7 +40,7 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user">
+            app:layout_constraintTop_toBottomOf="@+id/userEmail">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -57,14 +57,14 @@
             app:layout_constraintGuide_percent="0.5" />
 
         <Button
-            android:id="@+id/containedButton"
+            android:id="@+id/loginContainedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:text="@string/loginBtn"
             app:layout_constraintEnd_toStartOf="@+id/guideline_vertical"
             app:layout_constraintStart_toStartOf="@+id/guideline_vertical"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
+            app:layout_constraintTop_toBottomOf="@+id/userPassword" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
