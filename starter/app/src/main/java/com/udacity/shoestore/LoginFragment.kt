@@ -9,9 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
-/**
- * Defines the functionality to login into the app.
- */
+/** Defines the functionality to login into the app. */
 class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
