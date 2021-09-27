@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -33,6 +34,7 @@ android {
         compose true
     }
     composeOptions {
+        kotlinCompilerVersion rootProject.kotlinVersion
         kotlinCompilerExtensionVersion rootProject.composeVersion
     }
 }
