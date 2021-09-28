@@ -9,6 +9,7 @@
     <string name="welcome_fragment_title">Welcome</string>
     <string name="welcomeTextView">Welcome to</string>
     <string name="instructionsBtn">See Instructions</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Instructions Fragment -->
+    <string name="instructions_fragment_title">Instructions</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
