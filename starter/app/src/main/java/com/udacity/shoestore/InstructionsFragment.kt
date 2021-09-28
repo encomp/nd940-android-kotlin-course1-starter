@@ -53,15 +53,24 @@ private fun Greeting() {
     Row(horizontalArrangement = Arrangement.Center) {
         Column {
             Text(
-                text = stringResource(R.string.welcomeTextView),
-                modifier = Modifier.padding(24.dp)
-            )
-            Text(
-                text = stringResource(R.string.app_name),
+                text = stringResource(R.string.instructionsTitleTextView),
+                modifier = Modifier.padding(24.dp),
                 textAlign = TextAlign.Center,
                 color = MaterialTheme.colors.secondaryVariant,
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
+            )
+            Text(
+                text = stringResource(R.string.firstInstructionTextView),
+                modifier = Modifier.padding(12.dp),
+            )
+            Text(
+                text = stringResource(R.string.secondInstructionTextView),
+                modifier = Modifier.padding(12.dp),
+            )
+            Text(
+                text = stringResource(R.string.thirdInstructionTextView),
+                modifier = Modifier.padding(12.dp),
             )
         }
     }

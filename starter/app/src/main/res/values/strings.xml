@@ -12,4 +12,8 @@
     <!-- Instructions Fragment -->
     <string name="instructions_fragment_title">Instructions</string>
     <string name="shopBtn">Start Shopping</string>
+    <string name="instructionsTitleTextView">Shop:</string>
+    <string name="firstInstructionTextView">Press the Plus button to add a new pair of shoes to your list.</string>
+    <string name="secondInstructionTextView">Press the Logout option to log out from the app.</string>
+    <string name="thirdInstructionTextView">On the next screen a list of shoes will display all the shoes you have.</string>
 </resources>
