@@ -14,29 +14,15 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.5" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/welcomeTextView"
-            android:layout_width="wrap_content"
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/composeView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/welcomeTextView"
-            app:layout_constraintBottom_toTopOf="@+id/appNameTextView"
+            android:minHeight="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline_horizontal"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/appNameTextView"
-            style="@style/TextAppearance.ShoeStore.App"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/app_name"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintTop_toTopOf="@+id/guideline_horizontal" />
 
         <Button
             android:id="@+id/seeInstructionsContainedButton"
@@ -46,8 +32,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appNameTextView" />
+            app:layout_constraintTop_toBottomOf="@id/composeView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </layout>
