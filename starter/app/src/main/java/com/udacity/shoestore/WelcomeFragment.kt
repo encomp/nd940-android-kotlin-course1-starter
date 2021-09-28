@@ -28,7 +28,7 @@ class WelcomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_welcome,
@@ -37,7 +37,7 @@ class WelcomeFragment : Fragment() {
         )
         val composeView = binding.root.findViewById<ComposeView>(R.id.composeView)
         composeView.setContent {
-            MdcTheme() {
+            MdcTheme {
                 Greeting()
             }
         }
@@ -48,7 +48,7 @@ class WelcomeFragment : Fragment() {
 @Composable
 private fun Greeting() {
     Row(horizontalArrangement = Arrangement.Center) {
-        Column() {
+        Column {
             Text(
                 text = stringResource(R.string.welcomeTextView),
                 modifier = Modifier.padding(24.dp)

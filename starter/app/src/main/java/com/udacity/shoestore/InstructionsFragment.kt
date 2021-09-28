@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.udacity.shoestore.databinding.FragmentInstructionsBinding
-import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
 /** Define the instructions fragment. */
 class InstructionsFragment : Fragment() {
@@ -17,13 +16,13 @@ class InstructionsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_instructions,
             container,
             false
         )
-        return binding.root;
+        return binding.root
     }
 }
