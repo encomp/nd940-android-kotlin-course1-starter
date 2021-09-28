@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.google.android.material.composethemeadapter.MdcTheme
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
@@ -40,6 +41,11 @@ class WelcomeFragment : Fragment() {
             MdcTheme {
                 Greeting()
             }
+        }
+        binding.seeInstructionsContainedButton.setOnClickListener { view ->
+            val instructionsDirections =
+                WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment()
+            view.findNavController().navigate(instructionsDirections)
         }
         return binding.root
     }
