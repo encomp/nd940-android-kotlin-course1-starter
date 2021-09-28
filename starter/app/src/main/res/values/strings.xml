@@ -11,5 +11,5 @@
     <string name="instructionsBtn">See Instructions</string>
     <!-- Instructions Fragment -->
     <string name="instructions_fragment_title">Instructions</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shopBtn">Start Shopping</string>
 </resources>
