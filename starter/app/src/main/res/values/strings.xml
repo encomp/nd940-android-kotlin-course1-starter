@@ -21,6 +21,7 @@
     <string name="addShoeContentDescription">add</string>
     <string name="logoutMenuBtn">Logout</string>
     <!-- AddShoe Fragment -->
+    <string name="add_shoe_fragment_title">Add a Shoe</string>
     <string name="nameHint">name</string>
     <string name="companyHint">Company</string>
     <string name="sizeHint">Size</string>
