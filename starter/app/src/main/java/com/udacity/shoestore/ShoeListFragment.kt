@@ -47,6 +47,11 @@ class ShoeListFragment : Fragment() {
                 }
             }
         )
+        binding.addFab.setOnClickListener { view ->
+            view.findNavController().navigate(
+                ShoeListFragmentDirections.actionShoeListFragmentToAddShoeFragment()
+            )
+        }
         setHasOptionsMenu(true)
         return binding.root
     }
