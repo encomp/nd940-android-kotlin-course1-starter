@@ -20,6 +20,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.google.android.material.composethemeadapter.MdcTheme
 import com.udacity.shoestore.databinding.FragmentInstructionsBinding
 
@@ -43,6 +44,11 @@ class InstructionsFragment : Fragment() {
             MdcTheme {
                 Greeting()
             }
+        }
+        binding.shopContainedButton.setOnClickListener { view ->
+            view.findNavController().navigate(
+                InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment()
+            )
         }
         return binding.root
     }
