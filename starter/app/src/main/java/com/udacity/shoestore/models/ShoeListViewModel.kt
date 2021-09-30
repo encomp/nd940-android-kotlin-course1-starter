@@ -19,6 +19,11 @@ class ShoeListViewModel() : ViewModel() {
         _shoes.value = _shoeList
     }
 
+    fun clear() {
+        _shoeList.clear()
+        _shoes.value = _shoeList
+    }
+
     val shoes: LiveData<List<Shoe>>
         get() = _shoes
 

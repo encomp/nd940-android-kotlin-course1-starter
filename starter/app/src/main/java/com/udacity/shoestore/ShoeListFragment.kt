@@ -2,8 +2,8 @@ package com.udacity.shoestore
 
 import android.os.Bundle
 import android.view.*
-import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
@@ -62,7 +62,12 @@ class ShoeListFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-                || super.onOptionsItemSelected(item)
+        return when (item.itemId) {
+            R.id.loginFragment -> {
+                viewModel.clear()
+                NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
