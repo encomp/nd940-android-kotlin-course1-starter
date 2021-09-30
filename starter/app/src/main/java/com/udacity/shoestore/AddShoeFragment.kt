@@ -1,12 +1,13 @@
 package com.udacity.shoestore
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentAddShoeBinding
 import com.udacity.shoestore.models.ShoeListViewModel
 
@@ -15,9 +16,7 @@ class AddShoeFragment : Fragment() {
 
     private lateinit var binding: FragmentAddShoeBinding
 
-    private val viewModel: ShoeListViewModel by activityViewModels() {
-        ShoeListViewModel.Factory()
-    }
+    private val viewModel: ShoeListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +28,22 @@ class AddShoeFragment : Fragment() {
             container,
             false
         )
+        binding.saveBtn.setOnClickListener { view ->
+            val name = binding.nameEdit.text.toString()
+            val company = binding.companyEdit.text.toString()
+            val size = binding.sizeEdit.text.toString()
+            val description = binding.descriptionEdit.text.toString()
+            viewModel.add(name, company, size.toDouble(), description)
+            navigateToShoeList(view)
+        }
+        binding.cancelBtn.setOnClickListener { view ->
+            navigateToShoeList(view)
+        }
         return binding.root
+    }
+
+    private fun navigateToShoeList(view: View) {
+        view.findNavController()
+            .navigate(AddShoeFragmentDirections.actionAddShoeFragmentToShoeListFragment())
     }
 }
