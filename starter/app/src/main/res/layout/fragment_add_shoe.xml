@@ -2,6 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,7 +32,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/nameHint"
-                    android:inputType="textCapSentences" />
+                    android:inputType="textCapSentences"
+                    android:text="@={shoe.name}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -40,7 +47,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/companyHint"
-                    android:inputType="textWebEmailAddress" />
+                    android:inputType="textWebEmailAddress"
+                    android:text="@={shoe.company}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -54,7 +62,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/sizeHint"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="@={shoe.size}" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,7 +79,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/descriptionHint"
-                    android:inputType="textLongMessage|textWebEditText" />
+                    android:inputType="textLongMessage|textWebEditText"
+                    android:text="@={shoe.description}" />
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

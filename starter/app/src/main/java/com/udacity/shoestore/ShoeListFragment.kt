@@ -42,7 +42,7 @@ class ShoeListFragment : Fragment() {
                     )
                     shoesBinding.nameTextView.text = shoe.name
                     shoesBinding.companyTextView.text = shoe.company
-                    shoesBinding.sizeTextView.text = shoe.size.toInt().toString()
+                    shoesBinding.sizeTextView.text = shoe.size
                     binding.shoesList.addView(shoesBinding.root)
                 }
             }
