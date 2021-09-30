@@ -19,4 +19,5 @@
     <!-- ShoeList Fragment -->
     <string name="shoe_list_fragment_title">List of Shoes</string>
     <string name="addShoeContentDescription">add</string>
+    <string name="logoutMenuBtn">Logout</string>
 </resources>
