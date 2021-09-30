@@ -47,6 +47,7 @@ class ShoeListFragment : Fragment() {
                 }
             }
         )
+        setHasOptionsMenu(true)
         return binding.root
     }
 
