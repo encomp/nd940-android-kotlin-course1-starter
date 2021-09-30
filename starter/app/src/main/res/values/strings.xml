@@ -20,4 +20,11 @@
     <string name="shoe_list_fragment_title">List of Shoes</string>
     <string name="addShoeContentDescription">add</string>
     <string name="logoutMenuBtn">Logout</string>
+    <!-- AddShoe Fragment -->
+    <string name="nameHint">name</string>
+    <string name="companyHint">Company</string>
+    <string name="sizeHint">Size</string>
+    <string name="descriptionHint">Description</string>
+    <string name="saveBtn">Save</string>
+    <string name="cancelBtn">Cancel</string>
 </resources>
