@@ -1,11 +1,11 @@
 package com.udacity.shoestore
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
@@ -25,9 +25,16 @@ class LoginFragment : Fragment() {
             false
         )
         binding.loginContainedButton.setOnClickListener { view ->
-            val welcomeDirection = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment()
-            view.findNavController().navigate(welcomeDirection)
+            navigateToWelcome(view)
+        }
+        binding.registerOutlinedButton.setOnClickListener { view ->
+            navigateToWelcome(view)
         }
         return binding.root
+    }
+
+    private fun navigateToWelcome(view: View) {
+        view.findNavController()
+            .navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
     }
 }
