@@ -16,4 +16,7 @@
     <string name="firstInstructionTextView">Press the Plus button to add a new pair of shoes to your list.</string>
     <string name="secondInstructionTextView">Press the Logout option to log out from the app.</string>
     <string name="thirdInstructionTextView">On the next screen a list of shoes will display all the shoes you have.</string>
+    <!-- ShoeList Fragment -->
+    <string name="shoe_list_fragment_title">List of Shoes</string>
+    <string name="addShoeContentDescription">add</string>
 </resources>
